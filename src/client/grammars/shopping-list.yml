@@ -1,0 +1,12 @@
+rules:
+  - name: "shopping-item"
+    label: Item
+    type: token
+    pattern: |
+      [tag=/^N/]+
+
+  - name: "purchase-event"
+    label: Purchase
+    pattern: |
+      trigger = [lemma=buy]
+      item:Item = >dobj | >conj

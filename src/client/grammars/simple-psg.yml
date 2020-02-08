@@ -1,0 +1,20 @@
+## TIP: highlight and hit ctrl+/ to comment-uncomment
+# - name: "verb"
+#   label: Verb
+#   type: token
+#   pattern: ???
+#
+# - name: "noun"
+#   label: Noun
+#   type: token
+#   pattern: ???
+#
+# - name: "adjective"
+#   label: Adjective
+#   type: token
+#   pattern: ???
+#
+# - name: "noun-phrase"
+#   label: NP
+#   type: token
+#   pattern: ???

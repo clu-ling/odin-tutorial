@@ -1,0 +1,9 @@
+rules:
+  - name: "insensitive"
+    label: Example
+    type: token
+    pattern: |
+      # if we don't use [],
+      # Odin assumes the pattern is in terms
+      # of the token's word attribute
+      /(?i)guys/

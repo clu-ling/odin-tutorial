@@ -1,0 +1,2 @@
+RAS is phosphorylated by MEK.
+The phosphorylation of RAS by MEK leads to the ubiquitination of SMAD.

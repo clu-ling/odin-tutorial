@@ -1,0 +1,42 @@
+taxonomy:
+  - XP:
+    - NP
+    - DP
+    - VP
+    - PP
+    - ADJP
+
+# text: Some Noun Phrases are longer than others.
+rules:
+  - name: "dp"
+    label: DP
+    keep: false
+    type: token
+    pattern: |
+      (?<head> [tag=DT]) (?<phrase> @NP)
+
+  - name: "np"
+    label: NP
+    type: token
+    pattern: |
+      (?<phrase> [tag=/^N/]+)? (?<head> [tag=/^N/])
+
+  - name: "pp"
+    label: PP
+    keep: false
+    type: token
+    pattern: |
+      (?<head>[tag=IN]) (?<phrase> @NP)
+
+  - name: "adjp"
+    label: ADJP
+    keep: false
+    type: token
+    pattern: |
+      (?<head>[tag=/^RB/]) (?<phrase> @PP | @NP)
+
+  - name: "vp"
+    label: VP
+    type: token
+    pattern: |
+      (?<head> [tag=/^V/]) (?<phrase> @XP)

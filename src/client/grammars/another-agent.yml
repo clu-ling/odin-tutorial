@@ -1,0 +1,26 @@
+- name: "job-title"
+  label: JobTitle
+  type: token
+  pattern: |
+    Special Agent
+
+- name: "org"
+  label: Organization
+  type: token
+  # Don't worry if this rule doesn't make sense to you just yet.
+  # This pattern (and the following one) is a peek at things to come.  Feel free to rewrite it in a form that is familiar.
+  pattern: |
+    [entity=/ORG$/]+
+
+- name: "star-fox"
+  label: Person
+  type: token
+  pattern: |
+    [entity=/PER$/]+
+
+## TIP: highlight and hit ctrl+/ to comment-uncomment
+# - name: "you-complete-me"
+#   label: ReallySpecialGuy
+#   type: token
+#   pattern: |
+#     ???

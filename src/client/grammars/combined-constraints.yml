@@ -1,0 +1,5 @@
+- name: "combined"
+  label: Example
+  type: token
+  pattern: |
+    [tag=/^NN/ & word=/tle$/]

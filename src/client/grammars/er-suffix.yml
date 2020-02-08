@@ -1,0 +1,6 @@
+# NOTE: this won't compile without the pattern being implemented
+- name: "er-deriv-suffix"
+  label: HasDerivSuffix
+  type: token
+  pattern: |
+    ??? # implement me!

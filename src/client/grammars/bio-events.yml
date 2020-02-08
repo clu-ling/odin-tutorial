@@ -1,0 +1,41 @@
+taxonomy:
+  - Entity:
+    - Protein
+  - Event:
+    - Phosphorylation
+    - Ubiquitination
+    - Regulation
+
+rules:
+  - name: "protein-surface"
+    label: Protein
+    type: token
+    pattern: |
+      "MEK"|"RAS"|"SMAD"
+
+  - name: "phosphorylation-syntax-verb-event"
+    label: Phosphorylation
+    pattern: |
+      trigger = [lemma=phosphorylate]
+      theme:Protein = >nsubjpass
+      cause:Protein = >nmod_by
+
+  - name: "phosphorylation-syntax-nominal-event"
+    label: Phosphorylation
+    pattern: |
+      trigger = [lemma=phosphorylation]
+      theme:Protein = >nmod_of
+      cause:Protein = >nmod_by
+
+  - name: "ubiquitination-syntax-nominal-event"
+    label: Ubiquitination
+    pattern: |
+      trigger = [lemma=ubiquitination]
+      theme:Protein = >nmod_of
+
+  - name: "regulation-syntax-event"
+    label: Regulation
+    pattern: |
+      trigger = [lemma=lead]
+      cause:Event = >nsubj
+      effect:Event = >nmod_to

@@ -1,0 +1,18 @@
+## Where is Odin used?
+
+```yaml
+# example surface pattern
+# the name of this rule (must be unique)
+- name: "example-surface-pattern"
+  # the label to associate with the matched span
+  label: NP
+  # the type of matcher to use (ex. "token", "dependency", "graph")
+  # if this line is omitted, Odin will assume this is a dependency pattern
+  type: token
+  # description of pattern:
+  # 'chunk' attribute must end with NP.
+  # the '+' quantifier denotes that
+  # the pattern will match a sequence of one or more such tokens
+  pattern: |
+    [chunk=/NP$/]+
+```

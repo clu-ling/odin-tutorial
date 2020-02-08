@@ -1,0 +1,7 @@
+# NOTE: this won't compile without the pattern being implemented
+- name: "no-verbs"
+  label: NotVerb
+  # req. 1: This pattern should involve a single token constraint
+  # req. 2: The token constraint should use a negated pattern
+  pattern: |
+    ??? # implement me!

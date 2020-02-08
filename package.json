@@ -1,0 +1,73 @@
+{
+  "name": "odin-tutorial",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Interactive Odin tutorial using React, Node.js, Express, and Webpack.",
+  "main": "src/server/index.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "start": "npm run build && node src/server/index.js",
+    "client": "webpack-dev-server --mode development --devtool inline-source-map --hot",
+    "server": "nodemon src/server/index.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": { 
+    "name": "Gus Hahn-Powell", 
+    "email": "gus@parsertongue.org", 
+    "url": "https://parsertongue.org"
+  },
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/clu-ling/odin-tutorial#readme",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/clu-ling/odin-tutorial.git"
+  },
+  "dependencies": {
+    "@blueprintjs/core": "^3.13.0",
+    "@blueprintjs/select": "^3.7.0",
+    "axios": "^0.19.0",
+    "babel-polyfill": "^6.26.0",
+    "cors": "^2.8.5",
+    "express": "^4.16.3",
+    "glamor": "^2.20.40",
+    "lodash": "^4.17.11",
+    "prop-types": "^15.7.2",
+    "react": "^16.5.2",
+    "react-ace": "^7.0.4",
+    "react-dom": "^16.5.2",
+    "react-markdown": "^4.0.6",
+    "react-router-dom": "^5.1.0",
+    "react-select": "^3.0.5",
+    "react-syntax-highlighter": "^11.0.2",
+    "react-toastify": "^5.4.0",
+    "react-treebeard": "^3.1.0",
+    "text-annotation-graphs": "git://github.com/lum-ai/TAG.git#odinson",
+    "uninstall": "0.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.0",
+    "babel-loader": "^8.0.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "concurrently": "^4.0.0",
+    "css-loader": "^3.2.0",
+    "eslint": "6.1.0",
+    "eslint-config-airbnb": "18.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "file-loader": "^4.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "nodemon": "^1.17.3",
+    "raw-loader": "^3.1.0",
+    "style-loader": "^1.0.0",
+    "url-loader": "^2.1.0",
+    "webpack": "^4.5.0",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.3"
+  }
+}

@@ -1,0 +1,37 @@
+taxonomy:
+  - Entity:
+    - Crop
+    - BioticStressor:
+      - Fungus
+      - Bacterium
+      - Insect
+      - Nematode
+  - Event:
+    - Causal:
+      - Increase
+      - Decrease
+
+# Presence of Helicotylenchus was associated with lower yields of soybeans, corn, and barley.
+rules:
+  - name: "nematode"
+    label: Nematode
+    type: token
+    pattern: |
+      "Helicotylenchus"
+      
+  - name: "crop"
+    label: Crop
+    type: token
+    pattern: |
+      [lemma=/^(wheat|corn|barley|soybean)$/]
+  
+  
+  - name: "decrease-yield-syntax"
+    label: Decrease
+    graph: "universal-enhanced"
+    pattern: |
+      trigger = [lemma=associate] with [lemma=/^low/] [lemma=yield]
+      agent: BioticStressor = >nsubjpass >nmod_of?
+      patient: Crop = >nmod_of >conj?
+      
+      

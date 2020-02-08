@@ -1,0 +1,18 @@
+rules:
+  - name: "example-1a"
+    label: Subject
+    type: token
+    pattern: |
+      # a disjunction of two exact strings
+      # denoting either a passive or active subject
+      [incoming=nsubjpass] | [incoming=nsubj]
+
+# The commented out rule uses a regex
+# to cover the same two depedency relations
+# as in example-1a
+  # - name: "example-1b"
+  #   label: Subject
+  #   pattern: |
+  #     # a regex that will match
+  #     # both passive and active subjects
+  #     [incoming=/^nsubj/]
