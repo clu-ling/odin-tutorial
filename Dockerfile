@@ -2,22 +2,19 @@
 FROM node:11
 
 LABEL author="Gus Hahn-Powell"
-LABEL description="Odin UI"
+LABEL description="Odin tutorial"
 
 # Create app directory
 WORKDIR /app
-
-# If you are building your code for production
-# RUN npm install --only=production
 
 # Bundle app source
 COPY . .
 
 # Install app dependencies
-RUN yarn install
+RUN yarn install --no-optional
 
 # Build, minify, etc.
-RUN yarn run build
+RUN yarn build
 
 EXPOSE 7777
-CMD [ "yarn", "run", "start" ]
+CMD [ "yarn", "start" ]

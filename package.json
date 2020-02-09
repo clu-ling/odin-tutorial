@@ -11,20 +11,23 @@
     "server": "nodemon src/server/index.js",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
-  "author": { 
-    "name": "Gus Hahn-Powell", 
-    "email": "gus@parsertongue.org", 
+  "author": {
+    "name": "Gus Hahn-Powell",
+    "email": "gus@parsertongue.org",
     "url": "https://parsertongue.org"
   },
   "license": "Apache-2.0",
   "homepage": "https://github.com/clu-ling/odin-tutorial#readme",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/clu-ling/odin-tutorial.git"
+    "type": "git",
+    "url": "https://github.com/clu-ling/odin-tutorial.git"
   },
   "dependencies": {
+    "@babel/runtime": "^7.8.4",
     "@blueprintjs/core": "^3.13.0",
     "@blueprintjs/select": "^3.7.0",
+    "@emotion/core": "^10.0.27",
+    "@emotion/styled": "^10.0.27",
     "axios": "^0.19.0",
     "babel-polyfill": "^6.26.0",
     "cors": "^2.8.5",

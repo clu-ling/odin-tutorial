@@ -1,12 +1,10 @@
 version: "2.3"
 services:
   frontend:
-    image: parsertongue/odin-tutorial:latest
+    image: parsertongue/odin-tutorial:local
     build:
       context: .
       dockerfile: Dockerfile
-      # labels:
-      #   org.parsertongue.description: "Frontend for Odin UI"
     depends_on:
       - backend
     restart: always
@@ -16,8 +14,6 @@ services:
       - ./.env
     environment:
       ODIN_API_BASE_URL: http://backend:9000/api
-    volumes:
-      - ./:/app:rw
 
   backend:
     image: parsertongue/odin-rest-api:latest
