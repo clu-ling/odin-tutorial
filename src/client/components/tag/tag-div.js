@@ -41,7 +41,8 @@ export default class TAGdiv extends Component {
     this.graphOptions = {
       "none": {value: "none", label: "<hide bottom graph>", description: "hide the bottom graph."},
       "universal-enhanced": {value: "universal-enhanced", label: "Universal Enhanced Dependencies", description: "Use Universal Enhanced dependencies."},
-      "universal-basic": {value: "universal-basic", label: "Universal Basic Dependencies", description: "Use Universal Basic dependencies."}
+      "universal-basic": {value: "universal-basic", label: "Universal Basic Dependencies", description: "Use Universal Basic dependencies."},
+      "semantic-roles": {value: "semantic-roles", label: "Semantic Roles", description: "Use graph of semantic roles."},
     };
 
   }
