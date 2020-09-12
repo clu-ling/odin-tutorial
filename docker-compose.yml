@@ -1,4 +1,4 @@
-version: "2.3"
+version: "3.8"
 services:
   frontend:
     image: parsertongue/odin-tutorial:local
@@ -7,7 +7,7 @@ services:
       dockerfile: Dockerfile
     depends_on:
       - backend
-    restart: always
+    restart: on-failure
     ports:
       - "8880:7777"
     env_file:
@@ -17,7 +17,7 @@ services:
 
   backend:
     image: parsertongue/odin-rest-api:latest
-    restart: always
+    restart: on-failure
     ports:
       - "8881:9000"
     env_file:
