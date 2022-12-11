@@ -31,7 +31,7 @@
     "axios": "^0.19.0",
     "babel-polyfill": "^6.26.0",
     "cors": "^2.8.5",
-    "express": "^4.16.3",
+    "express": "^4.17.3",
     "glamor": "^2.20.40",
     "lodash": "^4.17.19",
     "prop-types": "^15.7.2",
