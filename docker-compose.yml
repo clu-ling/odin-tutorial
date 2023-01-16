@@ -2,6 +2,7 @@ version: "3.8"
 services:
   frontend:
     image: parsertongue/odin-tutorial:local
+    container_name: odin-tutorial-challenges
     build:
       context: .
       dockerfile: Dockerfile
@@ -16,7 +17,9 @@ services:
       ODIN_API_BASE_URL: http://backend:9000/api
 
   backend:
+    platform: linux/amd64
     image: parsertongue/odin-rest-api:latest
+    container_name: odin-tutorial-rest-api
     restart: on-failure
     ports:
       - "8881:9000"
@@ -24,7 +27,7 @@ services:
       - ./.env
     healthcheck:
       # ensure backend is ready
-      test: ["CMD", "curl", "localhost:9000/api"]
+      test: ["CMD", "curl", "--fail", "127.0.0.1:9000/api/annotate?text=hello", "||", "exit", "1"]
       start_period: 10s
       interval: 10s
       timeout: 5s
