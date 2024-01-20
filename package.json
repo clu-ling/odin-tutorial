@@ -44,7 +44,7 @@
     "react-syntax-highlighter": "^11.0.2",
     "react-toastify": "^5.4.0",
     "react-treebeard": "^3.1.0",
-    "text-annotation-graphs": "git+https://github.com/lum-ai/TAG.git#odinson",
+    "text-annotation-graphs": "https://github.com/lum-ai/TAG.git#odinson",
     "uninstall": "0.0.0"
   },
   "devDependencies": {
