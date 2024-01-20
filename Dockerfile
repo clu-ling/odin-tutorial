@@ -11,7 +11,7 @@ WORKDIR /app
 COPY . .
 
 # Install app dependencies
-RUN yarn install --no-optional
+RUN yarn install --no-optional --ignore-engines
 
 # Build, minify, etc.
 RUN yarn build

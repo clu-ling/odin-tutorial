@@ -43,6 +43,7 @@ export default class TAGdiv extends Component {
       "universal-enhanced": {value: "universal-enhanced", label: "Universal Enhanced Dependencies", description: "Use Universal Enhanced dependencies."},
       "universal-basic": {value: "universal-basic", label: "Universal Basic Dependencies", description: "Use Universal Basic dependencies."},
       "semantic-roles": {value: "semantic-roles", label: "Semantic Roles", description: "Use graph of semantic roles."},
+	  "hybrid": {value: "hybrid", label: "hybrid (union of all graphs)", description: "Use all available graphs."},
     };
 
   }
